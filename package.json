@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/SchoolOfCode/node-101-workshop-room-86/issues"
   },
-  "homepage": "https://github.com/SchoolOfCode/node-101-workshop-room-86#readme"
+  "homepage": "https://github.com/SchoolOfCode/node-101-workshop-room-86#readme",
+  "dependencies": {
+    "chalk": "^5.0.0"
+  }
 }

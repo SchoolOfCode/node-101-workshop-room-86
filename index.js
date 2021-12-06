@@ -1,4 +1,5 @@
 import myCollection from "./collection.js";
+import chalk from 'chalk';
   //console.log(myCollection);
 
   //2c. Create a function called describeItem, which should take in an item as a parameter done //
@@ -12,10 +13,13 @@ For example, the result of calling the describeItem function with the first item
 
   function describeItem(item) {
     if (item.count > 1 ){
-    console.log("I have " + (item.name) + ". Here's what I like about them:" + (item.whatILike))
+    console.log(
+      `I have ${chalk.yellow(item.count)} ${chalk.cyan(item.name)}s. Here's what I like about them: ${chalk.green(item.whatILike)}`
+      );
     } 
     else {
-        console.log("I have a " + (item.name) + ". Here's what I like about it:" + (item.whatILike))
+        console.log(
+          `I have a ${chalk.cyan(item.name)}. Here's what I like about it: ${chalk.green(item.whatILike)}`);
         
     }}
   //Call your function below where you've defined it, handing in the first item in myCollection
@@ -26,7 +30,7 @@ For example, the result of calling the describeItem function with the first item
  function describeCollection(collection) {
    collection.forEach(describeItem);
  }
- describeCollection(myCollection)
+ describeCollection(myCollection);
   // for(let i = 0; i < array.length; i++)
  // if( i<=3 ){ describeItem()
   //}
